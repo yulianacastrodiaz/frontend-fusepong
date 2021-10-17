@@ -1,5 +1,4 @@
 import React from "react";
-import s from "./LandingPage.module.css";
 import { NavLink } from "react-router-dom";
 
 export default function LandingPage() {
@@ -67,9 +66,11 @@ export default function LandingPage() {
                   </span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  En Up amamos construir herramientas que hagan el trabajo
+                  colaborativo más fácil. Queremos que los equipos sean libres
+                  de errores innecesarios; que logren controlar qué hicieron,
+                  qué harán y cómo lo harán en todo el ciclo de vida de un
+                  proyecto.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
