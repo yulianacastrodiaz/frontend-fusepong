@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Login.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -10,19 +11,21 @@ export default function Login() {
             <h1 className={s.h1}>Log in</h1>
             <input type="email" placeholder="Email" className={s.input} />
             <input type="password" placeholder="Password" className={s.input} />
-            <button className={s.button}>Sign In</button>
+            <button className={s.button}>Log In</button>
           </form>
         </div>
         <div className={s["overlay-container"]}>
           <div className={s.overlay}>
             <div className={s["overlay-panel"]}>
-              <h1 className={s.h1}>Welcome Back!</h1>
+              <h1 className={s.h1}>Bienvenido!</h1>
               <p className={s.p}>
-                To keep connected with us please login with your personal info
+                Para mantenerte conectado con nosotros, por favor, ingresa con
+                tu cuenta personal
               </p>
-              <button className={s.button} id={s.ghost}>
-                back
-              </button>
+              <p className={s.p}>No tienes una cuenta?</p>
+              <NavLink to="/signup" className={s.button} id={s.ghost}>
+                Sign Up
+              </NavLink>
             </div>
           </div>
         </div>
