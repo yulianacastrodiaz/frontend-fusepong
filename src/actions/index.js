@@ -1,19 +1,20 @@
+import axios from 'axios';
 export const LOGIN = 'LOGIN';
 
-export const login = (profile) => async (dispatch) => {
-  const response = await fetch('http://localhost:3001/login', {
-    credentials: 'include',
-    method: 'POST',
-    mode: 'cors',
-    body: JSON.stringify(profile),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    }
-  });
+export const login = (u) => async (dispatch) => {
+  try {
 
-  const user = await response.json();
-  dispatch({
-    type: LOGIN,
-    user
-  })
+    const response = await axios.post('http://localhost:3001/login', {
+      username: u.username,
+      password: u.password
+    });
+    console.log(response.data)
+    // const user = await response.json();
+    dispatch({
+      type: LOGIN,
+      user: response.data
+    })
+  } catch (error) {
+    console.log(error);
+  }
 }
