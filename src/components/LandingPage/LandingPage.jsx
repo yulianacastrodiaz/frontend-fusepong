@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./LandingPage.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -24,34 +25,34 @@ export default function LandingPage() {
                 >
                   <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                     <div className="flex items-center justify-between w-full md:w-auto">
-                      <a href="http://localhost:3000">
+                      <NavLink to="/">
                         <img
                           className="h-8 w-auto sm:h-10"
                           src="./img/up-chevron.png"
                           alt=""
                         ></img>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                   <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                    <a
-                      href="http://localhost:3000"
+                    <NavLink
+                      to="/home"
                       className="font-medium text-gray-500 hover:text-gray-900"
                     >
                       Home
-                    </a>
-                    <a
-                      href="http://localhost:3000"
+                    </NavLink>
+                    <NavLink
+                      to="/login"
                       className="font-medium text-indigo-600 hover:text-indigo-500"
                     >
                       Log in
-                    </a>
-                    <a
-                      href="http://localhost:3000"
+                    </NavLink>
+                    <NavLink
+                      to="/signup"
                       className="font-medium text-indigo-600 hover:text-indigo-500"
                     >
                       Sign up
-                    </a>
+                    </NavLink>
                   </div>
                 </nav>
               </div>
@@ -72,12 +73,12 @@ export default function LandingPage() {
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
-                    <a
-                      href="http://localhost:3000"
+                    <NavLink
+                      to="/login"
                       className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                     >
                       Get started
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
